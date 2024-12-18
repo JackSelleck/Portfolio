@@ -47,20 +47,38 @@
 									</h1>
 									<p>A solo project which I completed within four weeks<br />
 									The code I am most proud of is for the audio analysis and delay<br />
-									<a href="https://jackselleck.itch.io/krungus" target= "_blank" a style="font-size: 20px; color: rgb(80, 156, 175);">Link to download unity rhythm game</a> 
+									<a href="https://jackselleck.itch.io/generate-any-rythm-game-you-want" target= "_blank" a style="font-size: 20px; color: rgb(80, 156, 175);">Link to download unity rhythm game</a> 
 								</header>
 								
 								<div class="image main"><img src="images/Rhythm Game Unity.png" alt="" /></div>
 
 								<h3>Features</h3>
-								      <li>  An audio analysing script which helps create a rhythm game level out of any audio of the players choice at runtime. done by deciding when a beat on the specified hertz value is significant enough to produce a note
-								      <li>  An options menu allowing the player to customise note speed, note spawning sensitivity and minimum time between note spawns
-									  <li>	A developed score system with Points, Combos, Gradings on note hits and an overall grade given at the end of the song based on the players points compared to the maximum points they could have achieved
+								      <li>  An audio analysing script which helps create a rhythm game level out of any audio of the players choice at runtime..
+								      <li>  An options menu allowing the player to customise note speed, note spawning sensitivity and minimum time between note spawns.
+									  <li>	A developed score system with Points, Combos, Gradings on note hits and an overall grade given at the end of the song based on the players points compared to the maximum points they could have achieved.
 									  </li>
 									  <p></p>
 
 
-							    <h3>Pseudocode</h3>
+							    <h3>Code Explations</h3>
+								<h3>Audio analysis</h3>
+								<li> I get the current spectrum data of the chosen audio
+							    <li> I use a for loop to split the spectrum data into four hertz paremeters to be displaced on each line.
+								<li> This results in each line displaying a certain pitch of the song, for example pink notes are high pitch.
+								<li> Then, for each of the four hertz sections I take away the current frames spectrum data from the previous frame.
+								<li> I use this value to check if the change in spectrum data is significant enough to produce a note. </li>
+								<br> 
+								<h3>Audio Delay</h3>
+								<li> A delay is required because my rhythm game has a silent backing track which spawns the notes, then an overlayed track which the player hears.
+								<li> So I need to find the correct delay for the overlayed track, so it can be in time with when the notes reach the clicking area no matter the song or note speed.
+								<li> To do this, I get the time in the audio that the first note is spawned, and take that value away from the time in the audio which this first note collides with the perfect clicking area.
+								<li> Finally, the resulting value is taken away from how long the audio has been playing, and this gives me the ideal delay for the overlayed track.
+
+								</li>
+
+							
+								
+
 								<h4></h4>
 
 								
@@ -69,17 +87,17 @@
 										<header class="major">
                                         <p></p>
 										<h3>What I could have done differently<br /></h3>
-										If I come back to this project, I think the first thing I will attempt is the long, held notes often found in rhythm games
+										If I come back to this project, I think the first thing I will attempt is the long, held notes often found in rhythm games.
 										<br>If I had chosen to analyse the songs before the rhythm game level starts rather than analyse whilst it plays, I could have known what the potential points were from the start, 
 										allowing me to add a progress bar for the players overall ranking on the song.
-										<br>If I did not have other projects to work on at the same time, I likely would have finished it faster
+										<br>If I did not have other projects to work on at the same time, I likely would have finished it faster.
 										
                                             
 									
 								<p><p><p> 
 									<h3>To clarify</h3>
 									<p></p>
-									Many have asked if the game uses some sort of audio analysis AI, it does not, it is done with code; if I were to use AI in this project I think I would try using it to seperate instruments into their own lanes
+									Many have asked if the game uses some sort of audio analysis AI, it does not, it is done with code; if I were to use AI in this project I think I would try using it to seperate instruments into their own lanes.
 
 
 							</section>
