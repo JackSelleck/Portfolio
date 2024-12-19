@@ -60,10 +60,10 @@
 									  <p></p>
 
 
-							    <h3>Code Explations</h3>
+							    <h3>Code Explanations</h3>
 								<h3>Audio analysis</h3>
 								<li> I get the current spectrum data of the chosen audio
-							    <li> I use a for loop to split the spectrum data into four hertz paremeters to be displaced on each line.
+							    <li> I use a for loop to split the spectrum data into four hertz parameters to be displaced on each line.
 								<li> This results in each line displaying a certain pitch of the song, for example pink notes are high pitch.
 								<li> Then, for each of the four hertz sections I take away the current frames spectrum data from the previous frame.
 								<li> I use this value to check if the change in spectrum data is significant enough to produce a note. </li>
@@ -73,15 +73,8 @@
 								<li> So I need to find the correct delay for the overlayed track, so it can be in time with when the notes reach the clicking area no matter the song or note speed.
 								<li> To do this, I get the time in the audio that the first note is spawned, and take that value away from the time in the audio which this first note collides with the perfect clicking area.
 								<li> Finally, the resulting value is taken away from how long the audio has been playing, and this gives me the ideal delay for the overlayed track.
-
-								</li>
-
+								</li>	
 							
-								
-
-								<h4></h4>
-
-								
 								<p></p>
 									<section class="post">
 										<header class="major">
@@ -97,7 +90,7 @@
 								<p><p><p> 
 									<h3>To clarify</h3>
 									<p></p>
-									Many have asked if the game uses some sort of audio analysis AI, it does not, it is done with code; if I were to use AI in this project I think I would try using it to seperate instruments into their own lanes.
+									Many have asked if the game uses some sort of audio analysis AI, it does not, it is done with code; if I were to use AI in this project I think I would try using it to separate instruments into their own lanes.
 
 
 							</section>
