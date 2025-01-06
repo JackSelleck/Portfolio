@@ -2676,6 +2676,81 @@ input, select, textarea {
 			transform: scale(1.05);
 		}
 
+/* Video */
+.video {
+	border: 0;
+	display: inline-block;
+	position: relative;
+}
+
+	.video video {
+		display: block;
+	}
+
+	.video.left, .video.right {
+		max-width: 40%;
+	}
+
+		.video.left img, .video.right img {
+			width: 100%;
+		}
+
+	.video.left {
+		float: left;
+		margin: 0 2rem 2rem 0;
+		top: 0.75rem;
+	}
+
+	.video.right {
+		float: right;
+		margin: 0 0 2rem 2rem;
+		top: 0.75rem;
+	}
+
+	.video.fit {
+		display: block;
+		margin: 2.5rem 0;
+		width: 100%;
+	}
+
+		.video.fit:first-child {
+			margin-top: 0;
+		}
+
+		.video.fit img {
+			width: 100%;
+		}
+
+	.video.main {
+		display: block;
+		margin: 4rem 0;
+		width: 100%;
+	}
+
+		.video.main:first-child {
+			margin-top: 0;
+		}
+
+		.video.main video {
+			width: 100%;
+		}
+
+	@media screen and (max-width: 736px) {
+
+		.video.fit {
+			margin: 2rem 0;
+		}
+
+		.video.main {
+			margin: 2rem 0;
+		}
+
+	}
+
+	a.video {
+		overflow: hidden;
+	}
+
 /* Actions */
 
 	ul.actions {
@@ -3786,8 +3861,13 @@ input, select, textarea {
 				margin-top: -2rem;
 			}
 
-			#main > .post header.major > h1, #main > .post header.major h2 {
+			#main > .post header.major h1{
 				font-size: 4rem;
+				line-height: 1.1;
+				margin: 0 0 2rem 0;
+			}
+			#main > .post header.major h2 {
+				font-size: 2rem;
 				line-height: 1.1;
 				margin: 0 0 2rem 0;
 			}
