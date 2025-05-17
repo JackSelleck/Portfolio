@@ -27,13 +27,88 @@
 				<!-- Intro -->
 				 
 					<div id="intro">
+			
+						<!-- Scrolling collage above the portfolio heading --><!-- Scrolling collage above the portfolio heading -->
+						 
+<div id="scrolling-media-wrapper">
+  <div id="scrolling-media">
+    <img src="images/Screenshot 2024-09-20 204511.png" alt="">
+    <img src="images/MaxFall.gif" alt="">
+    <img src="images/Screenshot 2024-12-07 012835.png" alt="">
+    <!-- More images/videos for seamless effect -->
+    <img src="images/Screenshot 2024-10-13 055800.png" alt="">
+    <img src="images/Screenshot 2025-05-17 213931.png" alt="">
+    <img src="images/RhythmGameUnity.png" alt="">
+	    <img src="images/Screenshot 2025-01-05 023513.png" alt="">
+    <img src="images/Screenshot 2025-05-10 163152.png" alt="">
+    <img src="images/Screenshot 2024-12-07 012835.png" alt="">
+  </div>
+</div>
+<style>
+#scrolling-media-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 7rem; /* Increase this value for more space */
+}
+#scrolling-media img
+{
+  height: 400px; /* Increased from 120px */
+  border-radius: 8px;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  background: #000;
+  display: block;
+  min-width: 320px; /* Increased from 200px */
+}
+  #scrolling-media {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    width: max-content;
+    animation: scroll-left linear infinite;
+    /* Duration will be set by JS */
+  }
+  @keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(var(--scroll-distance, -110%)); }
+  }
+  #scrolling-media video::-webkit-media-controls-panel {
+    display: none !important;
+    opacity: 0 !important;
+  }
+</style>
+<script>
+window.addEventListener('DOMContentLoaded', function() {
+  const media = document.getElementById('scrolling-media');
+  // Duplicate all children for seamless scroll
+  Array.from(media.children).forEach(child => {
+    media.appendChild(child.cloneNode(true));
+  });
 
-					<!-- 	<marquee behavior="scroll" direction="right">
-							<a class="Image"><img src="images/Screenshot 2024-12-07 012835.png" alt="" /></a>
+  function setAnimation() {
+    // Total width of original content (half of children)
+    const children = media.children;
+    let width = 0;
+    for (let i = 0; i < children.length / 2; i++) {
+      width += children[i].offsetWidth + 16; // 16px gap
+    }
+    // Remove last gap
+    width -= 16;
+    media.style.setProperty('--scroll-distance', `-${width}px`);
+    // Set duration proportional to width (adjust speed here)
+    const pxPerSecond = 80; // lower = slower
+    const duration = width / pxPerSecond;
+    media.style.animationDuration = duration + 's';
+  }
 
-							</marquee>  -->
-						
-						<h1>Jack Selleck<br />
+  // Wait for images/videos to load for accurate width
+  window.setTimeout(setAnimation, 500);
+  window.addEventListener('resize', setAnimation);
+});
+</script>						
+                        
+                        <h1>Jack Selleck<br />
 						Portfolio</h1>
 						<p>Gameplay Engineer.<br> 
 							<a href="https://jackselleck.itch.io/" target= "_blank" a style="font-size: 20px; color: rgb(80, 156, 175);">My games can be found on itch.</a> 
@@ -87,15 +162,15 @@
 
 									   <p></p>
 									   <video 
-  class="video main"
-  preload="auto"
-  poster="images/RhythmGameUnity.png"
-  src="images/Rhythmgame(1).mp4"
-  controls
-  playsinline
->
-  Your browser does not support the video tag.
-</video>
+                                       class="video main"
+                                         preload="auto"
+                                         poster="images/RhythmGameUnity.png"
+                                         src="images/Rhythmgame(1).mp4"
+                                         controls
+                                         playsinline
+                                       >
+                                         Your browser does not support the video tag.
+                                       </video>
 									   </p> 
 
 								<ul class="actions special">
