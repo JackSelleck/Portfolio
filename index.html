@@ -27,87 +27,148 @@
 				<!-- Intro -->
 				 
 					<div id="intro">
-			
-						<!-- Scrolling collage above the portfolio heading --><!-- Scrolling collage above the portfolio heading -->
 						 
+<!-- The Images -->
 <div id="scrolling-media-wrapper">
   <div id="scrolling-media">
     <img src="images/Screenshot 2024-09-20 204511.png" alt="">
     <img src="images/MaxFall.gif" alt="">
     <img src="images/Screenshot 2024-12-07 012835.png" alt="">
-    <!-- More images/videos for seamless effect -->
     <img src="images/Screenshot 2024-10-13 055800.png" alt="">
     <img src="images/Screenshot 2025-05-17 213931.png" alt="">
     <img src="images/RhythmGameUnity.png" alt="">
-	    <img src="images/Screenshot 2025-01-05 023513.png" alt="">
+    <img src="images/Screenshot 2025-01-05 023513.png" alt="">
+    <img src="images/Screenshot 2025-05-10 163152.png" alt="">
+    <img src="images/Screenshot 2024-12-07 012835.png" alt="">
+    <img src="images/Screenshot 2024-09-20 204511.png" alt="">
+    <img src="images/MaxFall.gif" alt="">
+    <img src="images/Screenshot 2024-12-07 012835.png" alt="">
+    <img src="images/Screenshot 2024-10-13 055800.png" alt="">
+    <img src="images/Screenshot 2025-05-17 213931.png" alt="">
+    <img src="images/RhythmGameUnity.png" alt="">
+    <img src="images/Screenshot 2025-01-05 023513.png" alt="">
     <img src="images/Screenshot 2025-05-10 163152.png" alt="">
     <img src="images/Screenshot 2024-12-07 012835.png" alt="">
   </div>
 </div>
+
+<!-- CSS Stuff -->
 <style>
-#scrolling-media-wrapper {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  margin-bottom: 8rem; /* Increase this value for more space */
-}
-#scrolling-media img
-{
-  height: 400px; /* Increased from 120px */
-  border-radius: 8px;
-  aspect-ratio: 16/9;
-  object-fit: cover;
-  background: #000;
-  display: block;
-  min-width: 320px; /* Increased from 200px */
-}
+  :root {
+    --media-gap: 16px;
+    --scroll-speed: 80; /* px per second */
+  }
+
+  #scrolling-media-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 8rem;
+  }
+
   #scrolling-media {
     display: flex;
-    gap: 16px;
+    gap: var(--media-gap);
     align-items: center;
     width: max-content;
-    animation: scroll-left linear infinite;
-    /* Duration will be set by JS */
+    animation: scroll-right linear infinite;
+    animation-play-state: running;
   }
+
+  #scrolling-media-wrapper:hover #scrolling-media {
+    animation-play-state: paused;
+  }
+
+  #scrolling-media img,
+  #scrolling-media video {
+    height: 400px;
+    border-radius: 8px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: #000;
+    display: block;
+    min-width: 320px;
+  }
+
   @keyframes scroll-left {
     0% { transform: translateX(0); }
     100% { transform: translateX(var(--scroll-distance, -110%)); }
   }
+
+  @keyframes scroll-right {
+   0%   { transform: translateX(var(--scroll-distance, -110%)); }
+   100% { transform: translateX(0); }
+}
+
   #scrolling-media video::-webkit-media-controls-panel {
     display: none !important;
     opacity: 0 !important;
   }
-</style>
-<script>
-window.addEventListener('DOMContentLoaded', function() {
-  const media = document.getElementById('scrolling-media');
-  // Duplicate all children for seamless scroll
-  Array.from(media.children).forEach(child => {
-    media.appendChild(child.cloneNode(true));
-  });
 
-  function setAnimation() {
-    // Total width of original content (half of children)
-    const children = media.children;
-    let width = 0;
-    for (let i = 0; i < children.length / 2; i++) {
-      width += children[i].offsetWidth + 16; // 16px gap
+  @media (prefers-reduced-motion: reduce) {
+    #scrolling-media {
+      animation: none !important;
     }
-    // Remove last gap
-    width -= 16;
-    media.style.setProperty('--scroll-distance', `-${width}px`);
-    // Set duration proportional to width (adjust speed here)
-    const pxPerSecond = 80; // lower = slower
-    const duration = width / pxPerSecond;
-    media.style.animationDuration = duration + 's';
   }
+</style>
 
-  // Wait for images/videos to load for accurate width
-  window.setTimeout(setAnimation, 500);
-  window.addEventListener('resize', setAnimation);
-});
-</script>						
-                        
+<!-- JavaScript Stuff -->
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    const media = document.getElementById('scrolling-media');
+
+    // Only duplicate once
+    if (!media.dataset.cloned) {
+      Array.from(media.children).forEach(child => {
+        media.appendChild(child.cloneNode(true));
+      });
+      media.dataset.cloned = "true";
+    }
+
+    function setAnimation() {
+      const children = media.children;
+      let width = 0;
+      const gap = parseFloat(getComputedStyle(media).gap || 16);
+      const half = children.length / 2;
+
+      for (let i = 0; i < half; i++) {
+        width += children[i].offsetWidth + gap;
+      }
+
+      width -= gap; // Remove last gap
+      media.style.setProperty('--scroll-distance', `-${width}px`);
+
+      const pxPerSecond = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--scroll-speed')) || 80;
+      const duration = width / pxPerSecond;
+      media.style.animationDuration = `${duration}s`;
+    }
+
+    function waitForMediaLoad(callback) {
+      const mediaElements = media.querySelectorAll('img, video');
+      let loaded = 0;
+      if (mediaElements.length === 0) return callback();
+
+      mediaElements.forEach(el => {
+        if (el.complete || el.readyState >= 3) {
+          loaded++;
+          if (loaded === mediaElements.length) callback();
+        } else {
+          el.addEventListener('load', check);
+          el.addEventListener('loadeddata', check);
+        }
+
+        function check() {
+          loaded++;
+          if (loaded === mediaElements.length) callback();
+        }
+      });
+    }
+
+    waitForMediaLoad(setAnimation);
+    new ResizeObserver(setAnimation).observe(media);
+  });
+</script>	
+             
                         <h1>Jack Selleck<br />
 						Portfolio</h1>
 						<p>Gameplay Engineer.<br> 
