@@ -31,7 +31,7 @@ footer, header, hgroup, menu, nav, section {
 
 	.zoom-wrapper {
   transform: scale(0.7);         /* Scale to 80% */
-  transform-origin: top left;    /* Prevent centering */
+  transform-origin: top middle; 
   width: 125%;                   /* Compensate for reduced width */
   height: 125%;                  /* Compensate for reduced height */
 }
