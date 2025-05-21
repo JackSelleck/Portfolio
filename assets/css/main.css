@@ -29,6 +29,13 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+	.zoom-wrapper {
+  transform: scale(0.7);         /* Scale to 80% */
+  transform-origin: top left;    /* Prevent centering */
+  width: 125%;                   /* Compensate for reduced width */
+  height: 125%;                  /* Compensate for reduced height */
+}
+
 body {
 	line-height: 1;
 }
