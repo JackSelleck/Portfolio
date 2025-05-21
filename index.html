@@ -71,7 +71,7 @@
     gap: var(--media-gap);
     align-items: center;
     width: max-content;
-    animation: scroll-right linear infinite;
+    animation: scroll-right linear infinite; /* can change ts to left if u want */
     animation-play-state: running;
   }
     /* pauses on hover */
@@ -79,6 +79,7 @@
     animation-play-state: paused;
   }
 
+  /* size of the media */
   #scrolling-media img,
   #scrolling-media video {
     height: 400px;
@@ -96,8 +97,8 @@
   }
 
   @keyframes scroll-right {
-   0%   { transform: translateX(var(--scroll-distance, -110%)); }
    100% { transform: translateX(0); }
+   0%   { transform: translateX(var(--scroll-distance, -110%)); }
 }
 
   #scrolling-media video::-webkit-media-controls-panel {
@@ -195,7 +196,7 @@
 						<ul class="icons">
 							<li><a href="https://jackselleck.itch.io/" target= "_blank" class="icon brands fa-itch-io"></a></li>
 							<li><a href="https://github.com/JackSelleck" target= "_blank" class="icon brands fa-github"></i></a>
-							<li><a href="https://uk.linkedin.com/in/jack-selleck-66a151332" target= "_blank" class="icon brands fa-linkedin"></a></li>
+							<li><a href="https://www.linkedin.com/in/jack-selleck/" target= "_blank" class="icon brands fa-linkedin"></a></li>
 							
 						</ul>
 					</nav>
@@ -215,9 +216,9 @@
 									<br>the skills needed to join the industry as a games programmer <!--and generalist helper with my large skillset--><br>
 									</a></h4> 
 
-									<br><h2><a href="Rhythm-Game-Unity.html">Procedurally Generating Rhythm game</a></h3>
+									<br><h2><a href="Rhythm-Maker.html">Procedurally Generating Rhythm game</a></h3>
 									   
-									   <a href= "Rhythm-Game-Unity.html"> My rhythm game which works with any song. <br>Made in Unity, the player inserts
+									   <a href= "Rhythm-Maker.html"> My rhythm game which works with any song. <br>Made in Unity, the player inserts
 									   any audio of their choice, then selects their settings, and a rhythm game level will be generated, matching the tune
 									   of the chosen song.</a><br>		   
 
@@ -226,7 +227,7 @@
                                        class="video main"
                                          preload="auto"
                                          poster="images/RhythmGameUnity.png"
-                                         src="images/Rhythmgame(1).mp4"
+                                         src="videos/RhythmMaker.mp4"
                                          controls
                                          playsinline
                                        >
@@ -235,30 +236,35 @@
 									   </p> 
 
 								<ul class="actions special">
-									<li><a href="Rhythm-Game-Unity.html" class="button large">What I did</a></li>
+									<li><a href="Rhythm-Maker.html" class="button large">What I did</a></li>
 								</ul>
 							</article>
 
 						<!-- Posts -->
 					    	 <!-- Orbis Inertia -->
 							<section class="posts">
-								<article>
+
+								
+									<article>
 									<header>
 										<span class="date">Unreal Project</span>
-										<h2><a href="Inertia.html">Inertia</h2>
+										<h2><a href="Inertia.html">Inertia</a></h2>
 									</header>
-									<a class="image fit"><img src="images/Screenshot 2025-05-17 213805.png" alt="" /></a>
-									<p style="margin-top: -1em;">
+									<a class="video main" style="margin-top: 2em; display: block;">
+										<video autoplay loop muted src="videos/Inertia Highlight Reel.mp4" controls style="width:100%; max-width:100%;"></video>
+									</a>
+								
+									<p style="margin-top: -2em;">
 										<a href="Inertia.html">
 											A 3D platformer created as a group project for my undergraduate degree. I was the lead programmer, 
 											handling the vast majority of movement and mechanics.
 										</a>
 									</p>
-											
 									<ul class="actions special">
 										<li><a href="Inertia.html" class="button">What I did</a></li>
 									</ul>
 								</article>
+
                                 <!-- Krungus -->
 								<article>
 									<header>
@@ -266,12 +272,12 @@
 										<h2><a href="Jack-Selleck-Portfolio-Krungus.html">Krungus</a></h2>
 									</header>
 									<a class="video main" style="margin-top: 2em; display: block;">
-										<video autoplay loop muted src="images/Krungus Video.mp4" controls style="width:100%; max-width:100%;"></video>
+										<video autoplay loop muted src="videos/Krungus Video.mp4" controls style="width:100%; max-width:100%;"></video>
 									</a>
-									</a>
+								
 									<p style="margin-top: -2em;">
 										<a href="Jack-Selleck-Portfolio-Krungus.html">
-											A 3D action game combining sword combat with bullet hell elements, featuring Parrying,
+											An action game combining sword combat with bullet hell elements, featuring Parrying,
 											Pathfinding and a boss fight. This project taught me much about optimisation.
 										</a>
 									</p>
@@ -279,6 +285,7 @@
 										<li><a href="Jack-Selleck-Portfolio-Krungus.html" class="button">What I did</a></li>
 									</ul>
 								</article>
+								
 								
 							</section>
 

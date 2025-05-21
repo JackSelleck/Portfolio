@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Jack Selleck, Game Dev Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+		
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">My Games</a></li>
+							<li><a href="Jack-Selleck-Portfolio-My-Skills.html">My Skills</a></li>
+							<li><a href="About-Me.html">About Me</a></li>
+							<li class="active"><a href="Rhythm-Maker.html">What I did - Rhythm Maker</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://jackselleck.itch.io/" target= "_blank" class="icon brands fa-itch-io"></a></li>
+							<li><a href="https://github.com/JackSelleck" target= "_blank" class="icon brands fa-github"></a></li>
+							<li><a href="https://www.linkedin.com/in/jack-selleck/" target= "_blank" class="icon brands fa-linkedin"></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									
+									<h1>Coding C# in unity<br />
+									</h1>
+									<p>A solo project which I completed within four weeks<br />
+									The code I am most proud of is for the audio analysis and delay<br />
+									<a href="https://jackselleck.itch.io/generate-any-rythm-game-you-want" target= "_blank" a style="font-size: 20px; color: rgb(80, 156, 175);">Download Rhythm Maker</a> 
+								<p style="margin-top: -2em;"></p>
+							    <p></p>
+									<video 								
+                                       class="video main"
+                                         preload="auto"
+                                         poster="images/RhythmGameUnity.png"
+                                         src="videos/RhythmMaker.mp4"
+                                         controls
+                                         playsinline
+                                         >
+                                         Your browser does not support the video tag.
+                                       </video>
+									</p> 
+
+								</header>
+
+								<h3>Features</h3>
+								      <li>  An audio analysing script which helps create a rhythm game level out of any audio of the players choice at runtime.
+								      <li>  An options menu allowing the player to customise note speed, note spawning sensitivity and minimum time between note spawns.
+									  <li>	A developed score system with Points, Combos, Gradings on note hits and an overall grade given at the end of the song based on the players points compared to the maximum points they could have achieved.
+									  </li>
+									  <p></p>
+
+							    <h3> What makes this game stand out?</h3>
+								I believe that my procedurally generating rhythm game is more technically advanced than its competitors for a few reasons.
+								<li> No competitors i have seen allow the player to see a preview of what their song will be like before they confirm their options
+                                <li> They also do not have advanced customisations, having no options to change the note speed, and usually only being able to choose between an easy, normal and hard mode, which is
+									 not an ideal system for a procedurally generating rhythm game, since what is considered easy or hard depends entirely on the song.
+								</li>
+
+								<p></p>
+							    <h3>Code Explanations</h3>
+								<h4>Audio analysis</h4>
+								<li> I get the current spectrum data of the chosen audio
+							    <li> I use a for loop to split the spectrum data into four hertz parameters to be displaced on each line.
+								<li> This results in each line displaying a certain pitch of the song, for example pink notes are high pitch.
+								<li> Then, for each of the four hertz sections I take away the current frames spectrum data from the previous frame.
+								<li> I use this value to check if the change in spectrum data is significant enough to produce a note. </li>
+								<br> 
+								<h4>Audio Delay</h4>
+								<li> A delay is required because my rhythm game has a silent backing track which spawns the notes, then an overlayed track which the player hears.
+								<li> So I need to find the correct delay for the overlayed track, so it can be in time with when the notes reach the clicking area no matter the song or note speed.
+								<li> To do this, I get the time in the audio that the first note is spawned, and take that value away from the time in the audio which this first note collides with the perfect clicking area.
+								<li> Finally, the resulting value is taken away from how long the audio has been playing, and this gives me the ideal delay for the overlayed track.
+								</li>	
+							
+								<p></p>
+									<section class="post">
+										<header class="major">
+                                        <p></p>
+										<h3>What I could have done differently<br /></h3>
+										If I come back to this project, I think the first thing I will attempt is the long, held notes often found in rhythm games.
+										<br>If I had chosen to analyse the songs before the rhythm game level starts rather than analyse whilst it plays, I could have known what the potential points were from the start, 
+										allowing me to add a progress bar for the players overall ranking on the song.
+										<br>If I did not have other projects to work on at the same time, I likely would have finished it faster.
+										
+                                            
+									
+								<p><p><p> 
+									<h3>To clarify</h3>
+									<p></p>
+									Many have asked if the game uses some sort of audio analysis AI, it does not, it is done with code; if I were to use AI in this project I think I would try using it to separate instruments into their own lanes.
+
+							</section>
+
+					</div>
+					
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
