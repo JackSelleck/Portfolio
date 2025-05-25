@@ -1,0 +1,9 @@
+@echo off
+echo Converting all JPG, JPEG, and PNG images to WebP...
+
+for %%f in (*.jpg *.jpeg *.png) do (
+    cwebp -q 80 "%%f" -o "%%~nf.webp"
+)
+
+echo Done!
+pause
