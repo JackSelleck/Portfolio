@@ -20,7 +20,7 @@ jobs:
 
       - name: Run sitemap generator
         run: |
-          node scripts/generate-sitemap.js
+          node generate-sitemap.js
 
       - name: Commit and push sitemap
         run: |
