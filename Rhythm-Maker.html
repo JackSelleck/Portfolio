@@ -8,7 +8,7 @@
 	<head>
 		<title>Jack Selleck | Gameplay Engineer Portfolio</title>
 
-		<meta name="robots" content="index, follow" />
+		<meta name="robots" content="noindex, follow" />
   <link rel="icon" href="Ico/MaxTabIcon.ico" type="image/x-icon">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -31,18 +31,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=0.9">
 		
 
-<!-- WebSite: cleaned up, removed invalid sameAs -->
-<script type="application/ld+json">
+<!-- WebSite:-->
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "@id": "https://jackselleck.com/#jack-selleck",
-  "name": "My Cool Site",
-  "url": "https://example.com",
-  "description": "A site about awesome things.",
-  "image": "https://jackselleck.com/images/MaxTabIcon.jpg"
+  "name": "Jack Selleck, Game Dev Portfolio",
+  "url": "https://www.jackselleck.com",
+  "description": "Game developer specialising in gameplay programming, secondarily in engine programming, 2D art, game design and storytelling.",
+  "image": "https://www.jackselleck.com/images/MaxTabIcon.jpg",
+  "publisher": {
+    "@type": "Person",
+    "name": "Jack Selleck",
+    "image": "https://www.jackselleck.com/images/MaxTabIcon.jpg",
+    "@id": "https://www.jackselleck.com/#jack-selleck"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.jackselleck.com/?s={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
 }
-</script>
 
 <!-- Person -->
 <script type="application/ld+json">
@@ -52,7 +60,7 @@
   "@id": "https://jackselleck.com/#jack-selleck",
   "name": "Jack Selleck",
   "url": "https://www.jackselleck.com",
-  "image": "https://www.jackselleck.com/Webp/MaxTabIcon.ico",
+  "image": "https://www.jackselleck.com/ico/MaxTabIcon.ico",
   "jobTitle": "Game Developer",
   "email": "mailto:gamedev@jackselleck.com",
   "sameAs": [
@@ -62,9 +70,15 @@
     "https://jackselleck.itch.io/",
     "https://www.youtube.com/@JackGuySelleck",
     "https://www.reddit.com/user/JackSelleck/"
-  ]
+  ],
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "@id": "https://www.plymouth.ac.uk/",
+    "name": "University (Game Development Program)"
+  }
 }
 </script>
+
 
 <!-- CreativeWork -->
 <script type="application/ld+json">
