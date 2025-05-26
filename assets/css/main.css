@@ -35,6 +35,14 @@ footer, header, hgroup, menu, nav, section {
   width: 125%;                   
   height: 125%;          */        
 
+
+
+@media (max-width: 980px) {
+  #scrolling-media-wrapper {
+    display: none !important;
+  }
+}
+
 body {
 	line-height: 1;
 }
@@ -80,12 +88,12 @@ input, select, textarea {
 
 /* Basic */
 
-	@-ms-viewport {
-		width: device-width;
-	}
-
 	body {
 		-ms-overflow-style: scrollbar;
+	}
+
+	@-ms-viewport {
+		width: device-width;
 	}
 
 	@media screen and (max-width: 480px) {
