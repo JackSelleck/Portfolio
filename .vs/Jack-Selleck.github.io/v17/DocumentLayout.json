@@ -1,0 +1,143 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\bunger\\Documents\\GitHub\\Jack-Selleck.github.io\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\bunger\\Documents\\GitHub\\Jack-Selleck.github.io\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\bunger\\Documents\\GitHub\\Jack-Selleck.github.io\\About-Me.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:About-Me.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\bunger\\Documents\\GitHub\\Jack-Selleck.github.io\\Rhythm-Maker.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Rhythm-Maker.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\bunger\\Documents\\GitHub\\Jack-Selleck.github.io\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\bunger\\Documents\\GitHub\\Jack-Selleck.github.io\\Jack-Selleck-Portfolio-My-Skills.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Jack-Selleck-Portfolio-My-Skills.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\bunger\\Documents\\GitHub\\Jack-Selleck.github.io\\Jack-Selleck-Portfolio-Krungus.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Jack-Selleck-Portfolio-Krungus.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\bunger\\Documents\\GitHub\\Jack-Selleck.github.io\\Inertia.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Inertia.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "About-Me.html",
+              "DocumentMoniker": "C:\\Users\\bunger\\Documents\\GitHub\\Jack-Selleck.github.io\\About-Me.html",
+              "RelativeDocumentMoniker": "About-Me.html",
+              "ToolTip": "C:\\Users\\bunger\\Documents\\GitHub\\Jack-Selleck.github.io\\About-Me.html",
+              "RelativeToolTip": "About-Me.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-01T13:30:39.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Rhythm-Maker.html",
+              "DocumentMoniker": "C:\\Users\\bunger\\Documents\\GitHub\\Jack-Selleck.github.io\\Rhythm-Maker.html",
+              "RelativeDocumentMoniker": "Rhythm-Maker.html",
+              "ToolTip": "C:\\Users\\bunger\\Documents\\GitHub\\Jack-Selleck.github.io\\Rhythm-Maker.html",
+              "RelativeToolTip": "Rhythm-Maker.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-01T13:30:26.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Users\\bunger\\Documents\\GitHub\\Jack-Selleck.github.io\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "C:\\Users\\bunger\\Documents\\GitHub\\Jack-Selleck.github.io\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-06-01T13:30:24.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Jack-Selleck-Portfolio-My-Skills.html",
+              "DocumentMoniker": "C:\\Users\\bunger\\Documents\\GitHub\\Jack-Selleck.github.io\\Jack-Selleck-Portfolio-My-Skills.html",
+              "RelativeDocumentMoniker": "Jack-Selleck-Portfolio-My-Skills.html",
+              "ToolTip": "C:\\Users\\bunger\\Documents\\GitHub\\Jack-Selleck.github.io\\Jack-Selleck-Portfolio-My-Skills.html",
+              "RelativeToolTip": "Jack-Selleck-Portfolio-My-Skills.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-01T13:30:14.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Inertia.html",
+              "DocumentMoniker": "C:\\Users\\bunger\\Documents\\GitHub\\Jack-Selleck.github.io\\Inertia.html",
+              "RelativeDocumentMoniker": "Inertia.html",
+              "ToolTip": "C:\\Users\\bunger\\Documents\\GitHub\\Jack-Selleck.github.io\\Inertia.html",
+              "RelativeToolTip": "Inertia.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-01T13:30:05.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\bunger\\Documents\\GitHub\\Jack-Selleck.github.io\\index.html",
+              "RelativeDocumentMoniker": "index.html",
+              "ToolTip": "C:\\Users\\bunger\\Documents\\GitHub\\Jack-Selleck.github.io\\index.html",
+              "RelativeToolTip": "index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-01T13:30:03.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Jack-Selleck-Portfolio-Krungus.html",
+              "DocumentMoniker": "C:\\Users\\bunger\\Documents\\GitHub\\Jack-Selleck.github.io\\Jack-Selleck-Portfolio-Krungus.html",
+              "RelativeDocumentMoniker": "Jack-Selleck-Portfolio-Krungus.html",
+              "ToolTip": "C:\\Users\\bunger\\Documents\\GitHub\\Jack-Selleck.github.io\\Jack-Selleck-Portfolio-Krungus.html",
+              "RelativeToolTip": "Jack-Selleck-Portfolio-Krungus.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-01T13:29:41.494Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
