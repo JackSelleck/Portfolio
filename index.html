@@ -348,11 +348,12 @@ work ethic
 					<div id="scrolling-media">
 						<img data-src="Gifs/MaxFall.gif" alt="Running in forest and falling GIF" loading="lazy">
 						<img data-src="AVIF/DEEPER-surface-art.avif" alt="Personal project pixel art" loading="lazy">
-						<img data-src="AVIF/AnimaticConcept.avif" alt="An animatic I made about a robot hero" loading="lazy">
+						<img data-src="AVIF/AnimaticConcept.avif" alt="An animatic I made about a robot hero"
+							loading="lazy">
 						<img data-src="AVIF/Krungus2D.avif" alt="" loading="lazy">
 						<img data-src="AVIF/RhythmGameUnity.avif" alt="" loading="lazy">
 						<img data-src="AVIF/Krungus3D.avif" alt="" loading="lazy">
-						<img data-src="AVIF/RhythmMakerFileBrowser.avif" alt="" loading="lazy">	
+						<img data-src="AVIF/RhythmMakerFileBrowser.avif" alt="" loading="lazy">
 						<img data-src="AVIF/ComboBlueprints.avif" alt="" loading="lazy">
 						<img data-src="AVIF/Rhythm-Maker-Code.avif" alt="Personal project pixel art" loading="lazy">
 
@@ -567,7 +568,7 @@ work ethic
 							<h2><a href="Inertia.html">Inertia</a></h2>
 						</header>
 						<a class="video main" style="margin-top: 2em; display: block;">
-							<video autoplay loop muted src="Webm/Inertia Highlight Reel.webm" controls
+							<video autoplay loop muted src="Webm/Small Inertia Highlight Reel.webm" controls
 								style="width:100%; max-width:100%;"></video>
 						</a>
 
@@ -588,21 +589,43 @@ work ethic
 						<header>
 							<span class="date">Unity Project</span>
 							<h2><a href="Jack-Selleck-Portfolio-Krungus.html">Krungus</a></h2>
-						</header>
-						<a class="video main" style="margin-top: 2em; display: block;">
-							<video autoplay loop muted src="Webm/Krungus Video.webm" controls
-								style="width:100%; max-width:100%;"></video>
-						</a>
 
-						<p style="margin-top: -2em;">
-							<a href="Jack-Selleck-Portfolio-Krungus.html">
-								An action game combining sword combat with bullet hell elements, featuring Parrying,
-								Pathfinding and a boss fight. This project taught me much about optimisation.
-							</a>
-						</p>
-						<ul class="actions special">
-							<li><a href="Jack-Selleck-Portfolio-Krungus.html" class="button">What I did</a></li>
-						</ul>
+							<div id="player1" style="width:605px; height:339px; margin-bottom: 30px;"></div>
+
+							<script>
+								// Load YouTube IFrame API for Video 1
+								(function () {
+									var tag = document.createElement('script');
+									tag.src = "https://www.youtube.com/iframe_api";
+									document.body.appendChild(tag);
+
+									window.onYouTubeIframeAPIReady = function () {
+										new YT.Player('player1', {
+											videoId: 'FuozkyPF2NQ',
+											playerVars: {
+												autoplay: 1,
+												mute: 1,
+												loop: 1,
+												controls: 0,
+												playlist: 'FuozkyPF2NQ'
+											},
+											events: {
+												onReady: function (e) { e.target.playVideo(); }
+											}
+										});
+									};
+								})();
+							</script>
+
+							<p style="margin-top: 1em;">
+								<a href="Jack-Selleck-Portfolio-Krungus.html">
+									An action game combining sword combat with bullet hell elements, featuring Parrying,
+									Pathfinding and a boss fight. This project taught me much about optimisation.
+								</a>
+							</p>
+							<ul class="actions special">
+								<li><a href="Jack-Selleck-Portfolio-Krungus.html" class="button">What I did</a></li>
+							</ul>
 					</article>
 
 				</section>
