@@ -590,34 +590,14 @@ work ethic
 							<span class="date">Unity Project</span>
 							<h2><a href="Jack-Selleck-Portfolio-Krungus.html">Krungus</a></h2>
 
-							<div id="player1" style="width:605px; height:339px; margin-bottom: 30px;"></div>
+						</header>
+						
+						<a class="video main" style="margin-top: 2em; display: block;">
+							<video autoplay loop muted src="Webm/Small Krungus Video.webm" controls
+								style="width:100%; max-width:100%;"></video>
+						</a>
 
-							<script>
-								// Load YouTube IFrame API for Video 1
-								(function () {
-									var tag = document.createElement('script');
-									tag.src = "https://www.youtube.com/iframe_api";
-									document.body.appendChild(tag);
-
-									window.onYouTubeIframeAPIReady = function () {
-										new YT.Player('player1', {
-											videoId: 'FuozkyPF2NQ',
-											playerVars: {
-												autoplay: 1,
-												mute: 1,
-												loop: 1,
-												controls: 0,
-												playlist: 'FuozkyPF2NQ'
-											},
-											events: {
-												onReady: function (e) { e.target.playVideo(); }
-											}
-										});
-									};
-								})();
-							</script>
-
-							<p style="margin-top: 1em;">
+							<p style="margin-top: -2em;">
 								<a href="Jack-Selleck-Portfolio-Krungus.html">
 									An action game combining sword combat with bullet hell elements, featuring Parrying,
 									Pathfinding and a boss fight. This project taught me much about optimisation.
