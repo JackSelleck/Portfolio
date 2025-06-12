@@ -656,6 +656,13 @@ work ethic
 		}
 	</script>
 
+	<script>
+		document.querySelectorAll('img[data-src]').forEach(img => {
+        img.src = img.getAttribute('data-src');
+        img.removeAttribute('data-src');
+        });
+	</script>
+
 </body>
 
 </html>
