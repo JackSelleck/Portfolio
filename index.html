@@ -343,150 +343,149 @@ work ethic
 			<!-- Intro -->
 			<div id="intro">
 
-				<!-- The Webp -->
-				<div id="scrolling-media-wrapper">
-					<div id="scrolling-media">
-						<img data-src="Gifs/MaxFall.gif" alt="Running in forest and falling GIF" loading="lazy">
-						<img data-src="AVIF/DEEPER-surface-art.avif" alt="Personal project pixel art" loading="lazy">
-						<img data-src="AVIF/AnimaticConcept.avif" alt="An animatic I made about a robot hero"
-							loading="lazy">
-						<img data-src="AVIF/Krungus2D.avif" alt="" loading="lazy">
-						<img data-src="AVIF/RhythmGameUnity.avif" alt="" loading="lazy">
-						<img data-src="AVIF/Krungus3D.avif" alt="" loading="lazy">
-						<img data-src="AVIF/RhythmMakerFileBrowser.avif" alt="" loading="lazy">
-						<img data-src="AVIF/ComboBlueprints.avif" alt="" loading="lazy">
-						<img data-src="AVIF/Rhythm-Maker-Code.avif" alt="Personal project pixel art" loading="lazy">
+<!-- The Webp -->
+<div id="scrolling-media-wrapper">
+  <div id="scrolling-media" class="media-not-cloned">
+    <img data-src="Gifs/MaxFall.gif" alt="Running in forest and falling GIF" loading="lazy">
+    <img data-src="AVIF/DEEPER-surface-art.avif" alt="Pixel art of deep surface scene" loading="lazy">
+    <img data-src="AVIF/AnimaticConcept.avif" alt="An animatic I made about a robot hero" loading="lazy">
+    <img data-src="AVIF/Krungus2D.avif" alt="2D Krungus character art" loading="lazy">
+    <img data-src="AVIF/RhythmGameUnity.avif" alt="Rhythm game in Unity preview" loading="lazy">
+    <img data-src="AVIF/Krungus3D.avif" alt="3D Krungus character model" loading="lazy">
+    <img data-src="AVIF/RhythmMakerFileBrowser.avif" alt="Rhythm maker file browser UI" loading="lazy">
+    <img data-src="AVIF/ComboBlueprints.avif" alt="Combo logic in Unreal Blueprints" loading="lazy">
+    <img data-src="AVIF/Rhythm-Maker-Code.avif" alt="Code for rhythm maker project" loading="lazy">
+  </div>
+</div>
 
-					</div>
-				</div>
+<!-- CSS Stuff -->
+<style>
+  :root {
+    --media-gap: 16px;
+    --scroll-speed: 80;
+    /* px per second */
+  }
 
-				<!-- CSS Stuff -->
-				<style>
-					:root {
-						--media-gap: 16px;
-						--scroll-speed: 80;
-						/* px per second */
-					}
+  #scrolling-media-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 8rem;
+  }
 
-					#scrolling-media-wrapper {
-						width: 100%;
-						overflow: hidden;
-						position: relative;
-						margin-bottom: 8rem;
-					}
+  #scrolling-media {
+    display: flex;
+    gap: var(--media-gap);
+    align-items: center;
+    width: max-content;
+    animation: scroll-right linear infinite;
+    animation-play-state: running;
+    will-change: transform;
+  }
 
-					#scrolling-media {
-						display: flex;
-						gap: var(--media-gap);
-						align-items: center;
-						width: max-content;
-						animation: scroll-right linear infinite;
-						animation-play-state: running;
-					}
+  #scrolling-media-wrapper:hover #scrolling-media {
+    animation-play-state: paused;
+  }
 
-					/*	#scrolling-media-wrapper:hover #scrolling-media {
-						animation-play-state: paused;
-					}
-                */
-					#scrolling-media img,
-					#scrolling-media video {
-						height: 400px;
-						border-radius: 8px;
-						aspect-ratio: 16 / 9;
-						object-fit: cover;
-						background: #000;
-						display: block;
-						min-width: 320px;
-					}
+  #scrolling-media img,
+  #scrolling-media video {
+    height: 400px;
+    border-radius: 8px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: #000;
+    display: block;
+    min-width: 320px;
+  }
 
-					@keyframes scroll-left {
-						0% {
-							transform: translateX(0);
-						}
+  @keyframes scroll-left {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(var(--scroll-distance, -110%), 0, 0);
+    }
+  }
 
-						100% {
-							transform: translateX(var(--scroll-distance, -110%));
-						}
-					}
+  @keyframes scroll-right {
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+    0% {
+      transform: translate3d(var(--scroll-distance, -110%), 0, 0);
+    }
+  }
 
-					@keyframes scroll-right {
-						100% {
-							transform: translateX(0);
-						}
+  #scrolling-media video::-webkit-media-controls-panel {
+    display: none !important;
+    opacity: 0 !important;
+  }
 
-						0% {
-							transform: translateX(var(--scroll-distance, -110%));
-						}
-					}
+  @media (prefers-reduced-motion: reduce) {
+    #scrolling-media {
+      animation: none !important;
+    }
+  }
+</style>
 
-					#scrolling-media video::-webkit-media-controls-panel {
-						display: none !important;
-						opacity: 0 !important;
-					}
+<!-- JavaScript Stuff -->
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    const media = document.getElementById('scrolling-media');
 
-					@media (prefers-reduced-motion: reduce) {
-						#scrolling-media {
-							animation: none !important;
-						}
-					}
-				</style>
+    // Only clone if not already cloned
+    if (!media.classList.contains('media-cloned')) {
+      Array.from(media.children).forEach(child => {
+        media.appendChild(child.cloneNode(true));
+      });
+      media.classList.add('media-cloned');
+    }
 
-				<!-- JavaScript Stuff -->
-				<script>
-					window.addEventListener('DOMContentLoaded', function () {
-						const media = document.getElementById('scrolling-media');
+    function setAnimation() {
+      const children = media.children;
+      let width = 0;
+      const gap = parseFloat(getComputedStyle(media).gap || 16);
+      const half = children.length / 2;
 
-						if (!media.dataset.cloned) {
-							Array.from(media.children).forEach(child => {
-								media.appendChild(child.cloneNode(true));
-							});
-							media.dataset.cloned = "true";
-						}
+      for (let i = 0; i < half; i++) {
+        width += children[i].offsetWidth + gap;
+      }
 
-						function setAnimation() {
-							const children = media.children;
-							let width = 0;
-							const gap = parseFloat(getComputedStyle(media).gap || 16);
-							const half = children.length / 2;
+      width -= gap;
 
-							for (let i = 0; i < half; i++) {
-								width += children[i].offsetWidth + gap;
-							}
+      media.style.setProperty('--scroll-distance', `-${width}px`);
 
-							width -= gap;
+      const pxPerSecond = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--scroll-speed')) || 80;
+      const duration = width / pxPerSecond;
+      media.style.animationDuration = `${duration}s`;
+    }
 
-							media.style.setProperty('--scroll-distance', `-${width}px`);
+    function waitForMediaLoad(callback) {
+      const mediaElements = media.querySelectorAll('img, video');
+      let loaded = 0;
+      if (mediaElements.length === 0) return callback();
 
-							const pxPerSecond = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--scroll-speed')) || 80;
-							const duration = width / pxPerSecond;
-							media.style.animationDuration = `${duration}s`;
-						}
+      mediaElements.forEach(el => {
+        if (el.complete || el.readyState >= 3) {
+          loaded++;
+          if (loaded === mediaElements.length) callback();
+        } else {
+          el.addEventListener('load', check);
+          el.addEventListener('loadeddata', check);
+        }
 
-						function waitForMediaLoad(callback) {
-							const mediaElements = media.querySelectorAll('img, video');
-							let loaded = 0;
-							if (mediaElements.length === 0) return callback();
+        function check() {
+          loaded++;
+          if (loaded === mediaElements.length) callback();
+        }
+      });
+    }
 
-							mediaElements.forEach(el => {
-								if (el.complete || el.readyState >= 3) {
-									loaded++;
-									if (loaded === mediaElements.length) callback();
-								} else {
-									el.addEventListener('load', check);
-									el.addEventListener('loadeddata', check);
-								}
+    waitForMediaLoad(() => requestAnimationFrame(setAnimation));
+    new ResizeObserver(() => requestAnimationFrame(setAnimation)).observe(media);
+  });
+</script>
 
-								function check() {
-									loaded++;
-									if (loaded === mediaElements.length) callback();
-								}
-							});
-						}
-
-						waitForMediaLoad(setAnimation);
-						new ResizeObserver(setAnimation).observe(media);
-					});
-				</script>
 
 				<h1>Jack Selleck<br /> Portfolio</h1>
 				<p>Gameplay Engineer.<br />
@@ -615,11 +614,13 @@ work ethic
 			<footer id="footer">
 				<section>
 					<h2>Contact</h2>
-					<ul class="alt">
-						<li><a href="mailto:gamedev@jackselleck.com">gamedev@jackselleck.com</a></li>
-						<li><a href="https://www.linkedin.com/in/jack-selleck/" target="_blank">LinkedIn</a></li>
-						<li><a href="https://discordapp.com/users/1314411687859978323" target="_blank">Discord</a></li>
-					</ul>
+					<address>
+						<ul class="alt">
+							<li><a href="mailto:gamedev@jackselleck.com">gamedev@jackselleck.com</a></li>
+							<li><a href="https://www.linkedin.com/in/jack-selleck/" target="_blank" rel="noopener">LinkedIn</a></li>
+							<li><a href="https://discordapp.com/users/1314411687859978323" target="_blank" rel="noopener">Discord</a></li>
+						</ul>
+					</address>
 				</section>
 			</footer>
 
