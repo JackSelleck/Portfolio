@@ -346,24 +346,23 @@ work ethic
 <!-- The Webp -->
 <div id="scrolling-media-wrapper">
   <div id="scrolling-media" class="media-not-cloned">
-    <img data-src="Gifs/MaxFall.gif" alt="Running in forest and falling GIF" loading="lazy">
-    <img data-src="AVIF/DEEPER-surface-art.avif" alt="Pixel art of deep surface scene" loading="lazy">
-    <img data-src="AVIF/AnimaticConcept.avif" alt="An animatic I made about a robot hero" loading="lazy">
-    <img data-src="AVIF/Krungus2D.avif" alt="2D Krungus character art" loading="lazy">
-    <img data-src="AVIF/RhythmGameUnity.avif" alt="Rhythm game in Unity preview" loading="lazy">
-    <img data-src="AVIF/Krungus3D.avif" alt="3D Krungus character model" loading="lazy">
-    <img data-src="AVIF/RhythmMakerFileBrowser.avif" alt="Rhythm maker file browser UI" loading="lazy">
-    <img data-src="AVIF/ComboBlueprints.avif" alt="Combo logic in Unreal Blueprints" loading="lazy">
-    <img data-src="AVIF/Rhythm-Maker-Code.avif" alt="Code for rhythm maker project" loading="lazy">
+    <img data-src="Gifs/MaxFall.gif" alt="Running in forest and falling GIF" loading="lazy" decoding="async">
+    <img data-src="AVIF/DEEPER-surface-art.avif" alt="Pixel art of deep surface scene" loading="lazy" decoding="async">
+    <img data-src="AVIF/AnimaticConcept.avif" alt="An animatic I made about a robot hero" loading="lazy" decoding="async">
+    <img data-src="AVIF/Krungus2D.avif" alt="2D Krungus character art" loading="lazy" decoding="async">
+    <img data-src="AVIF/RhythmGameUnity.avif" alt="Rhythm game in Unity preview" loading="lazy" decoding="async">
+    <img data-src="AVIF/Krungus3D.avif" alt="3D Krungus character model" loading="lazy" decoding="async">
+    <img data-src="AVIF/RhythmMakerFileBrowser.avif" alt="Rhythm maker file browser UI" loading="lazy" decoding="async">
+    <img data-src="AVIF/ComboBlueprints.avif" alt="Combo logic in Unreal Blueprints" loading="lazy" decoding="async">
+    <img data-src="AVIF/Rhythm-Maker-Code.avif" alt="Code for rhythm maker project" loading="lazy" decoding="async">
   </div>
 </div>
 
-<!-- CSS Stuff -->
+<!-- Critical CSS inline -->
 <style>
   :root {
     --media-gap: 16px;
-    --scroll-speed: 80;
-    /* px per second */
+    --scroll-speed: 80; /* px per second */
   }
 
   #scrolling-media-wrapper {
@@ -383,9 +382,9 @@ work ethic
     will-change: transform;
   }
 
-  #scrolling-media-wrapper:hover #scrolling-media {
+ /* #scrolling-media-wrapper:hover #scrolling-media {
     animation-play-state: paused;
-  }
+  } */
 
   #scrolling-media img,
   #scrolling-media video {
@@ -428,16 +427,29 @@ work ethic
   }
 </style>
 
-<!-- JavaScript Stuff -->
-<script>
+<!-- Load rest of CSS asynchronously -->
+<link rel="stylesheet" href="additional-styles.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="additional-styles.css"></noscript>
+
+<!-- JavaScript Stuff with defer -->
+<script defer>
   window.addEventListener('DOMContentLoaded', function () {
     const media = document.getElementById('scrolling-media');
 
-    // Only clone if not already cloned
     if (!media.classList.contains('media-cloned')) {
-      Array.from(media.children).forEach(child => {
-        media.appendChild(child.cloneNode(true));
-      });
+Array.from(media.children).forEach((child, i) => {
+  const clone = child.cloneNode(true);
+  if (clone.tagName === 'IMG') {
+    clone.loading = "lazy";
+    clone.decoding = "async";
+
+    // Optional safety net: fallback alt text
+    if (!clone.alt || clone.alt.trim() === "") {
+      clone.alt = `Showcase image ${i + 1}`;
+    }
+  }
+  media.appendChild(clone);
+});
       media.classList.add('media-cloned');
     }
 
@@ -644,6 +656,33 @@ work ethic
 			});
 		}
 	</script>
+
+	<script defer>
+  window.addEventListener('DOMContentLoaded', () => {
+    const lazyImages = document.querySelectorAll('img[data-src]');
+
+    const loadImage = (img) => {
+      img.src = img.dataset.src;
+      img.removeAttribute('data-src');
+    };
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            loadImage(entry.target);
+            obs.unobserve(entry.target);
+          }
+        });
+      });
+
+      lazyImages.forEach(img => observer.observe(img));
+    } else {
+      // Fallback: Load all images immediately
+      lazyImages.forEach(loadImage);
+    }
+  });
+</script>
 
 </body>
 
