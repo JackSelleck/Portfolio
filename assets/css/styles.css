@@ -1,0 +1,54 @@
+:root {
+  --media-gap: 16px;
+  --scroll-speed: 80; /* px per second */
+}
+
+#scrolling-media-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 8rem;
+}
+
+#scrolling-media {
+  display: flex;
+  gap: var(--media-gap);
+  align-items: center;
+  width: max-content;
+  animation: scroll-right linear infinite;
+  animation-play-state: running;
+  will-change: transform;
+}
+
+#scrolling-media img,
+#scrolling-media video {
+  height: 400px;
+  border-radius: 8px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #000;
+  display: block;
+  min-width: 320px;
+}
+
+@keyframes scroll-left {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(var(--scroll-distance, -110%), 0, 0); }
+}
+
+@keyframes scroll-right {
+  0% { transform: translate3d(var(--scroll-distance, -110%), 0, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+#scrolling-media video::-webkit-media-controls-panel {
+  display: none !important;
+  opacity: 0 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #scrolling-media {
+    animation: none !important;
+  }
+}
+
