@@ -541,6 +541,19 @@ work ethic
 				<!-- Featured Post -->
 				<article class="post featured">
 					<header class="major">
+						<h1>Professional Projects</h1>
+
+						<h2 style="margin: top 2em;"><a href="Life-Seeker.html">Life Seeker (Current Project)</a></h2>
+						<a href="Life-Seeker.html">
+							A 3D platformer expanding upon the disillusion series.<br /> 						
+						
+          				<div class="image main" style="margin-top: 2em; display: block;">
+						<img src="Webp - Life Seeker/Lifeseeker_Eyes.webp" alt="Life Seeker Promotional Image"/></div> </a>
+						<hr class="divider">
+
+
+					</br>
+
 						<h2>University Projects</h2>
 						<h4>
 							Single-player, gameplay and coding focused projects
@@ -586,7 +599,7 @@ work ethic
 
 						<p style="margin-top: -2em;">
 							<a href="Inertia.html">
-								A 3D platformer created as a group project for my undergraduate degree. I was the lead
+								A 3D platformer created as a group project with my classmates. I was the lead
 								programmer,
 								handling the vast majority of movement and mechanics.
 							</a>
@@ -658,12 +671,18 @@ work ethic
 		}
 	</script>
 
-	<script>
-		document.querySelectorAll('img[data-src]').forEach(img => {
-        img.src = img.getAttribute('data-src');
-        img.removeAttribute('data-src');
-        });
-	</script>
+<script>
+  // Set image src from data-src (only on desktop)
+  if (window.innerWidth > 980) {
+    document.querySelectorAll('#scrolling-media img[data-src]').forEach(img => {
+      img.src = img.getAttribute('data-src');
+      img.removeAttribute('data-src');
+    });
+  }
+</script>
+
+<!-- Scrolling logic (must come after images are assigned) -->
+<script src="assets/js/script.js"></script>
 
 </body>
 

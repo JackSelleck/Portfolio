@@ -90,51 +90,103 @@
 </script>
 
 
-  <!-- CreativeWork -->
-  <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "CreativeWork",
-  "name": "Rhythm Maker",
-  "alternateName": "Generate any rhythm game you want",
+  "@type": "VideoGame",
+  "name": "Life Seeker",
+  "alternateName": "Life Seeker (Disillusion series spinoff)",
+  "url": "https://www.jackselleck.com/Life-Seeker.html",
+  "description": "Life Seeker is a 3D platformer spinoff of the Disillusion series. Development contributions include player movement polish, camera smoothing, tools, UI and gameplay systems. Demo planned for early 2026.",
+  "image": "https://www.jackselleck.com/Webp - Life Seeker/Lifeseeker_Eyes.webp",
   "author": {
     "@type": "Person",
     "name": "Jack Selleck",
     "url": "https://www.jackselleck.com"
   },
-  "headline": "Coding C# in Unity - Rhythm Maker",
-  "description": "A procedurally-generated rhythm game made with C# in Unity. Uses real-time audio analysis and delay calibration to let players generate rhythm games from any song.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Jack Selleck Games",
+    "url": "https://www.jackselleck.com"
+  },
   "datePublished": "2025-05-01",
-  "url": "https://www.jackselleck.com/Rhythm-Maker.html",
-  "image": "https://www.jackselleck.com/Webp/RhythmGameUnity.webp",
   "inLanguage": "en",
   "genre": [
-    "Rhythm Game",
-    "Procedural Generation",
-    "Game Development",
-    "Unity C#"
+    "Platformer",
+    "3D Platformer",
+    "Action-Adventure"
   ],
-  "keywords": "Unity, Rhythm Game, Audio Analysis, Procedural Music, Game Developer Portfolio"
+  "gamePlatform": [
+    "PC (Steam)"
+  ],
+  "operatingSystem": [
+    "Windows"
+  ],
+  "applicationCategory": "Game",
+  "sameAs": [
+    "https://store.steampowered.com/news/app/2775370/view/509591543575741051?l=english",
+    "https://store.steampowered.com/app/2775370/Disillusion_ST/",
+    "https://store.steampowered.com/app/1490060/Disillusion/",
+    "https://www.youtube.com/channel/UCOA9vQmLGycUqxbIKIxJ5Fw",
+    "https://www.instagram.com/life.seeker_dst/"
+  ],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.jackselleck.com/Life-Seeker.html"
+  }
 }
 </script>
 
-  <!-- VideoObject -->
-  <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "VideoObject",
-  "name": "Rhythm Maker Gameplay Demo",
-  "description": "A gameplay reel of the Unity-made rhythm game using audio spectrum analysis and audio delay calculation.",
-  "thumbnailUrl": "https://www.jackselleck.com/Webp/RhythmGameUnity.webp",
+  "name": "Life Seeker — Gameplay Reel",
+  "description": "Gameplay reel showing Life Seeker mechanics, camera and player movement polish.",
+  "thumbnailUrl": "https://www.jackselleck.com/Webp - Life Seeker/Lifeseeker_Eyes.webp",
   "uploadDate": "2025-05-01",
-  "contentUrl": "https://www.jackselleck.com/Webm/RhythmMaker.webm",
-  "embedUrl": "https://www.jackselleck.com/Webm/RhythmMaker.webm",
+  "contentUrl": "https://www.jackselleck.com/Webm/LifeSeeker_Reel.webm",
+  "embedUrl": "https://www.jackselleck.com/Webm/LifeSeeker_Reel.webm",
   "author": {
     "@type": "Person",
     "name": "Jack Selleck",
     "url": "https://www.jackselleck.com"
-  }
+  },
+  "isPartOf": {
+    "@type": "VideoGame",
+    "name": "Life Seeker",
+    "url": "https://www.jackselleck.com/Life-Seeker.html"
+  },
+  "inLanguage": "en"
 }
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.jackselleck.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "My Games",
+      "item": "https://www.jackselleck.com/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Life Seeker",
+      "item": "https://www.jackselleck.com/Life-Seeker.html"
+    }
+  ]
+}
+</script>
 </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -144,6 +196,63 @@
   </noscript>
   <meta name="viewport" content="width=device-width, initial-scale=0.9">
 </head>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f0f0f0;
+  }
+
+  .collage {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-auto-rows: 150px;
+    gap: 10px;
+    padding: 10px;
+    grid-auto-flow: dense;
+  }
+
+  .collage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s;
+  }
+
+  .collage img:hover {
+    transform: scale(1.05);
+  }
+
+  .collage img.large {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+
+    .collage img.wide {
+    grid-row: span 1;
+    grid-column: span 2;
+  }
+
+    .collage img.largewide {
+    grid-row: span 2;
+    grid-column: span 4;
+  }
+
+    .collage img.largelong {
+    grid-row: span 4;
+    grid-column: span 2;
+  }
+
+  @media (max-width: 600px) {
+    .collage {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      grid-auto-rows: 100px;
+    }
+  }
+</style>
+
 
 <body class="is-preload">
 
@@ -184,26 +293,42 @@
         <section class="post">
           <header class="major">
 
-            <h1>Life Seeker<br />
-            </h1>
-            A Surrealist 3D platformer<br />
-            <a href="https://jackselleck.itch.io/generate-any-rythm-game-you-want" target="_blank" a
-              style="font-size: 20px; color: rgb(80, 156, 175);">Life Seeker Steam Page</a>
-            <p style="margin-top: -2em;"></p>
+            <h1>Life Seeker</h1>   
+            A 3D platformer expanding upon the disillusion series
+            <p>
+            <a href="https://store.steampowered.com/news/app/2775370/view/509591543575741051?l=english" target="_blank" a
+              style="font-size: 20px;  color: rgb(80, 156, 175);">Life Seeker Steam Page</a></p>
+            <p style="margin-top: 0em;"></p>
             <p></p>
-            <video class="video main" preload="auto" poster="Webp/RhythmGameUnity.webp" src="Webm/RhythmMaker.webm"
-              controls playsinline>
-              Your browser does not support the video tag.
-            </video>
+            <div class="collage">
+              <img src="Webp - Life Seeker/Lifeseeker_Eyes.webp" alt="Image 1" class = "wide">
+              <img src="Webp - Life Seeker/BLAST2.webp"  alt="Image 2" class="large"> 
+              <img src="Webp - Life Seeker/dance1.gif" alt="Image 4" class="large">
+              <img src="Webp - Life Seeker/TomorrowHighup.webp" alt="Image 5">
+              <img src="Webp - Life Seeker/lifeseekerletters.webp" alt="Image 6" class="wide">
+              <img src="Webp - Life Seeker/mng.webp" alt="Image 5" class = "large">
+              <img src="Webp - Life Seeker/LAV1.webp" alt="Image 5">
+              <img src="Webp - Life Seeker/adboards.webp" alt="Image 5">   
+              <img src="Webp - Life Seeker/cannon.webp" alt="Image 3" class = "largewide">     
+              <img src="Webp - Life Seeker/cherub1.webp" alt="Image 5">
+            </div>
             </p>
-          I joined the project midway through development but quickly learnt the codebase and systems.
+                           
+          I am working on Life Seeker with three artists and another programmer.
+          <br> they are all very kind, talented and hard working and im loving working with them.
+          <br>I joined the project around six months into development but quickly learnt the codebase and systems. 
+          <br>The project is in progress and will not be released for a few years, although a demo will arrive early 2026.
+          <br>Development of the project is interesting since im working with lots of custom systems and creating tools working with them.</br>
           </header>
+
+            <hr class="divider" style="margin-top: -2em;">
 
           <h3>My contributions</h3>
           <li> Polishing player movement</li>
           <li> Smoothed camera movement between gravity fields
           <li> Made camera smoothly follow the player during jumps
-          <li> Dialog debug window that worked together with our custom node system to quickly test characters cutscenes
+          <li> Dialog debug window which works together with our custom node system to quickly test characters cutscenes
+          <li> Creating nodes which unlock cards and ranch characters
           <li> 2D characters locking to the camera in a 3D space
           <li> Pushable objects
           <li> Controller support for all UI and gameplay outside of movement
@@ -215,26 +340,33 @@
           <li> Play testing and feedback
           <li> First person mode
           <li> Testing and giving feedback on performance for all levels
-          </li>
-          <h3>Lead developer of ranch mode responsibilities</h3>
           <li> Day count and display system
           <li> Modular character creation system with scriptable objects
           <li> Age, Hunger based on day system
           <li> Stat display UI with radar graph
+          <li> Save system
         <!--  <li> Battle system
           <li> Enemy AI
           <li> Stats and leveling system
           <li> Inventory system
-          <li> Item pick ups
-          <li> Save system
+          <li> Item pick ups   
           <li> Quest system -->
-          <li> UI for all of the above
+          <li> UI for ranch mode
           </li>
+          
           <p></p>
           <h3>Bug Fixes</h3>
           <li> Fixed fade vfx not working when triggered by a character node
           <li> Solved bug where objects would sometimes flash in and out of existence
           </li>
+
+          			<hr class="divider">
+
+            <div class="image main" style="margin-top: 4em; display: block;">
+						<img src="Webp - Life Seeker/Info.webp" alt="Life Seeker Promotional Image"/></div> </a>
+            
+              <hr class="divider">                        
+              <div style="margin-top: -5em;"></div>
 
 
       </div>
